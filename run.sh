@@ -13,3 +13,17 @@ for i in {1..10}; do
     echo "epoch: $i"
     steps/fc-learn.sh $i
 done
+
+for i in {1..10}; do
+    echo "eval epoch $i"
+    steps/fc-predict.sh $i
+done
+
+for i in {1..10}; do
+    (cd exp/fc800-step0.01-clip5 && tail -n+2 test-$i.log > test-$i)
+done
+
+for i in {1..10}; do
+    echo -n "epoch $i: "
+    utils/eval.py exp/fc800-step0.01-clip5/test-$i data/test.blabel
+done

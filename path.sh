@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export dist=`pwd`/dist/mnist-535e518
+export dist=`pwd`/dist/mnist
