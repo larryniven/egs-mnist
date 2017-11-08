@@ -6,7 +6,7 @@ epoch=$1
 
 exp=exp/fc800-step0.01-clip5/
 
-OPENBLAS_CORETYPE=Sandybridge OMP_NUM_THREADS=2 $dist/mnist/fc-learn \
+OPENBLAS_CORETYPE=Sandybridge OMP_NUM_THREADS=2 $dist/nnbin/fc-learn \
     --input-scp data/train-norm.bimg.scp \
     --label-scp data/train.blabel.scp \
     --param $exp/param-$((epoch-1)) \

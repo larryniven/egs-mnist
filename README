@@ -1,3 +1,10 @@
+MNIST Recipe
+============
+
+See run.sh.  Currently it only contains a recipe for training
+a 784x800x10 feedforward neural network.  Cross entropy is
+minimized with SGD with gradient clipping and mini-batch size 1.
+
 epoch 1: error: 384 total: 10000 rate: 0.0384
 epoch 2: error: 299 total: 10000 rate: 0.0299
 epoch 3: error: 309 total: 10000 rate: 0.0309
